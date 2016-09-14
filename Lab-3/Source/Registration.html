@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Latest compiled and minified CSS -->
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    <title>Registration</title>
+    <script>
+        function Reg()
+        {
+            if(document.getElementById('name').value.length>0 && document.getElementById('contact').value.length>0 && 
+		document.getElementById('gender').value.length>0 && document.getElementById('username').value.length>0 &&
+                    document.getElementById('pwd').value.length>0 &&
+                    document.getElementById('pwd').value.length>0 &&
+                    ( document.getElementById('cpwd').value ==document.getElementById('pwd').value))
+            {
+                localStorage.setItem('userName',(document.getElementById('username').value));
+                localStorage.setItem('pwd',(document.getElementById('pwd').value));
+                window.location.href='Login.html';
+            }
+            else
+            {
+                alert('Missing information !');
+            }
+        }
+    </script>
+   <style>
+	body {
+      background-color: mediumturquoise;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+</style>
+
+
+</head>
+<body>
+ <center>  
+<form class="form-horizontal">
+
+
+<fieldset>
+
+<!-- Form Name -->
+<center>
+<legend><h1>Registration Form</h1></legend>
+</center>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="name">Name</label>  
+  <div class="col-md-4">
+  <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">Email</label>  
+  <div class="col-md-4">
+  <input id="email" name="email" type="email" placeholder="Email ID" class="form-control input-md" required="">
+  
+  </div>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="contact">Contact no.</label>  
+  <div class="col-md-4">
+  <input id="contact" name="contact" type="tel" size="10" placeholder="Contact No." class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="gender">Gender</label>
+  <div class="col-md-4">
+    <select id="gender" name="gender" class="form-control">
+      <option value="-1">Select</option>
+      <option value="1">Male</option>
+      <option value="2">Female</option>
+    </select>
+  </div>
+</div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="username">Username</label>  
+  <div class="col-md-4">
+  <input id="username" name="username" type="text" placeholder="Username" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password">Password</label>  
+  <div class="col-md-4">
+  <input id="pwd" name="password" type="password" placeholder="Password" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="confirm password">Confirm-password</label>  
+  <div class="col-md-4">
+  <input id="cpwd" name="confirm password" type="password" placeholder="Confirm Password" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<input type="button" id="Submit" value="Submit" align="center" onclick="Reg()"/>
+
+</div>
+</fieldset>
+</form>
+</center>
+</body>
+</html>
+

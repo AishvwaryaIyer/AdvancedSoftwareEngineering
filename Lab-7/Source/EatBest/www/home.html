@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <style>
+
+        .menu input{
+      width: 300px;
+      background: #ffffff;
+      border: 2px solid #C90D2D;
+      border-radius: 4px;
+      color: #5e5e5e;
+      font-family: 'Exo', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 6px;
+      margin-top: 10px;
+    }
+    .menu button{
+        width: 419px;
+        height:40px;
+        background:#C90D2D;
+        border:  2px solid #C90D2D;
+        cursor: pointer;
+        border-radius: 4px;
+        color: #ffffff;
+        font-family: 'Exo', sans-serif;
+        font-size: 17px;
+        font-weight: 700;
+        padding: 6px;
+        margin-top: 10px;
+    }
+      
+
+           thead th {
+            font-weight: 400;
+            background: #8a97a0;
+            color: #FFF;
+        }
+
+        tr {
+            background: #f4f7f8;
+            border: 1px solid #FFF;
+            margin-bottom: 5px;
+        }
+
+        tr:nth-child(even) {
+            background: #e8eeef;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 20px;
+            font-weight: 300;
+        }
+
+        tfoot tr {
+            background: none;
+        }
+
+        tfoot td {
+            padding: 10px 2px;
+            color: #8a97a0;
+        }
+  </style>
+
+</head>
+<body style="background: url(img/KrWLkhxTGebMF2XvWJZI_Food.jpg) no-repeat center;background-size:cover;">
+
+
+  <div  ng-controller="HomeCtrl" style="top: 200px">
+    <div class="menu" id="div_SearchContainer">
+    <h1 align="absolute" style="text-align: center; color: #ffffff;background-color:#C90D2D; width:20px;">GET REVIEW & EAT THE BEST</h1>
+    <input type="text" id="place" placeholder="Enter the place"/>
+    <input type="text" id="eat" placeholder="What would you like to eat ?"/>
+    <button id="btn_getReview" ng-click="getVenues()">Find Restaurants</button>
+    </div> </br></br></br></br></br></br></br></br>
+    <div id="div_VenueList">
+      <h2 style="text-align: center; color:#ffffff"> List of Restaurants</h2>
+      <ul>
+       <li ng-repeat="venue in venueList" style="font-size: x-large; color: #ffffff; text-align: center; list-style: none list-style-position:inside;">
+          <a  href="" ng-click="getReviews(venue)" style="font-size: x-large; color: #ffffff; text-align: center;">{{venue.name}}</a>
+        </li>
+      </ul>
+
+    </div>
+    <div id="div_ReviewList" style="display:none;"  >
+
+
+          <p ng-model="ReviewWithSentiment">
+
+            <TABLE BORDER=2 CELLPADDING=4 style="max-width: 960px;
+            margin: 10px auto;
+            border: 1px solid #FFF"> <TR> <TH style="color: aliceblue; background:#C90D2D" COLSPAN=2>Sentiment Analysis- UClassify API</TH> </TR>
+                <TR> <TD> Positive Score </TD> <TD>{{ReviewWithSentiment.positive}}</TD></TR>
+                <TR> <TD>Negative Score </TD> <TD>{{ReviewWithSentiment.negative}}</TD></TR>
+                
+                <TR> <TH style="color: aliceblue; background:#C90D2D" COLSPAN=2 BGCOLOR="#445553">{{ReviewWithSentiment.reviewText}}</TH> </TR>
+            </TABLE>
+
+          </p>
+
+    </div>
+  </div>
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+  <script src="js/app.js"></script>
+
+
+</body>
+</html>

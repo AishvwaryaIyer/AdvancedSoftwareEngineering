@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>LifeExpectancy</title>
+    <div class="details">
+        <div class="bg-primary" style="text-align: left;width:250px;background-color:#fcc1bf; color:black"><h1>CALCULATE YOUR AGE AND LIFE EXPECTANCY</h1></div>
+        </div>
+
+</head>
+<body ng-app=life>
+<div ng-controller=lifectrl>
+    <form>
+    <div class="form-group"> <label for="year"></label>
+        <input type="number" class="form-control"placeholder="Enter your birth year {yyyy}" id="year" ng-model="h">
+    </div>
+
+
+    </form>
+<div class="center">
+    <button class="btn btn-success" style="background-color:#fcc1bf" ng-click="age()">Find Out</button>
+</div></br></br>
+    <div class="details">
+    <p ng-model=cal>
+        
+
+         <div class="bg-success">Year of Birth:&nbsp&nbsp{{cal.YEAR}}</div><br>
+        <div class="bg-warning">Age:&nbsp&nbsp{{cal.AGE}}</div><br>
+        <div class="bg-warning">LifeExpectancy:&nbsp&nbsp{{cal.LIFEEXPECTANCY}}</div><br>
+
+
+    </p>
+        </div>
+</div>
+</body>
+</html>

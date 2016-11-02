@@ -1,0 +1,31 @@
+.h1{
+    background-image: url("background.jpg");
+    background-size: cover;
+    color: lemonchiffon;
+    font-family: "Comic Sans MS";
+    font-size: large;
+}
+.g1{
+
+    text-color: #FF1493;
+}
+.i1{
+
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.tb{
+    border-style: solid;
+    border-color:#FF1493;
+
+    font-size:13pt;
+    height:20px;
+    width:300px;
+}

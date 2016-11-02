@@ -1,0 +1,45 @@
+<html ng-app="MyMongoDb" ng-controller="MyMongoDbController" class="h1">
+<head >
+    <title>Register Yourself</title>
+
+</head>
+<body>
+<div class="register1">
+    <form class="contact_form"  ng-submit="insertData()" name="contact_form">
+        <div class="register2">
+            <h1 align="center">Register Yourself</h1>
+            <div class="r1" align="center"><span class="form_hint"></span>
+                <div class="a1" align="center">First Name: <input type="text" class="tb" name="fname"  ng-model="formData.fname" required /></div>
+                <br><br></div>
+            <div class="r2" align="center"><span class="form_hint"></span>
+                <div class="a1" align="center">Last Name: <input type="text" class="tb" name="lname" ng-model="formData.lname" required /></div>
+                <br><br></div>
+            <div class="r3" align="center"><span class="form_hint"></span>
+                <div class="a1" align="center">E-Mail:<input type="email" class="tb" name="email" ng-model="formData.email"  required /></div>
+                <br><br></div>
+            <div class="r4" align="center"> <span class="form_hint"></span>
+                <div class="a1" align="center">Password: <input type="password" name="password" class="tb" ng-model="formData.password" ></div>
+                <br><br></div>
+            <div class="r5" align="center"><span class="form_hint"></span>
+                <div class="a1" align="center">Confirm Password: <input type="password" name="cpassword" class="tb" ng-model="formData.cpassword" ></div>
+                <br><br></div>
+            <div class="r6" align="center"> <input type="submit" class="button" name="Sign In"  value="Register Yourself"/></div>
+        </div>
+    </form>
+    <div class="register3" align="center">
+        <input type="button" value="Login" class="button" onclick="go()"/>
+        <script>
+            function go() {
+                window.location='Info.html';
+            }
+        </script>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular.js"></script>
+<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-resource.js"></script>
+<script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
+<script src="app.js"></script>
+<link rel="stylesheet" href="IndexCss.css" type="text/css">
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="h1">
+<head>
+    <meta charset="UTF-8">
+    <title>User Information</title>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-resource.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.1.1/angular-sanitize.js"></script>
+    <script src="app.js"></script>
+    <script src="nodejs.js"></script>
+    <link rel="stylesheet" href="InfoCss.css" type="text/css">
+</head>
+<body ng-app="MyMongoDb" id="body">
+
+<div ng-controller="MyMongoDbController" >
+    <input type="button" value="Get User Information" style="color:#FF1493" class="i1" ng-Click="disp()"/><br><br><br><br>
+    <div id="container" class="g1">
+
+    </div><br>
+    <form method="post" action="http://127.0.0.1:8081/delete" autocomplete="on" >
+        <input type="submit" align="center" class="i1" value="Delete Your Information" style="color:#FF1493" >
+        <input type="text" align="center" class="tb" name="id1" id="id1" placeholder="Please enter corresponding ID" style="color:#FF1493"/><br>
+
+
+    </form><br><br>
+    <script>    function sync() {
+        document.getElementById('id2').value=document.getElementById('id1').value;
+    }
+    </script>
+
+    <form method="post" action="http://127.0.0.1:8081/update" align="center">
+        <input type="submit" class="i1" value="Please Update Your Information" style="color:#FF1493"><br>
+        ID:
+        <input type="text" class="tb" name="id2" id="id2" /><br><br>
+        First Name:
+        <input type="text" class="tb" name="fn" /><br><br>
+        Last Name:
+        <input type="text" class="tb" name="ln" /><br><br>
+        E-Mail:
+        <input type="text" class="tb" name="ml" /><br><br>
+
+    </form>
+
+</div>
+
+</body>
+</html>
